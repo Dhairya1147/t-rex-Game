@@ -9,6 +9,8 @@ const SPEED_SCALE_INCREASE = 0.00001
 const WorldElem = document.querySelector('[data-world]')
 const scoreElem = document.querySelector('[data-score]')
 const startScreenElem = document.querySelector('[data-start-screen]')
+const headElem = document.querySelector('[data-head]')
+const tryElem = document.querySelector('[data-try]')
 
 setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
@@ -68,6 +70,8 @@ function handleStart(){
     setupDino()
     setupCactus()
     startScreenElem.classList.add("hide")
+    headElem.classList.add("hide")
+    tryElem.classList.add("hide")
     window.requestAnimationFrame(update)
 }
 
@@ -76,6 +80,7 @@ function handleLose(){
     setTimeout(() => {
         document.addEventListener("keydown", handleStart, { once:true})
         startScreenElem.classList.remove("hide")
+        tryElem.classList.remove("hide")
     }, 100)
 }
 

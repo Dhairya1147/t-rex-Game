@@ -20,10 +20,24 @@ body{
     margin-bottom: 200px;
 }
 
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7vmin;
+}
+
+.try{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7vmin;
+    font-weight: bolder;
+}
+
 .score{
     position: absolute;
-    font-size: 4vmin;
-    font-weight: bolder;
+    font-size: 5vmin;
     right: 1vmin;
     top: 1vmin;
 }
